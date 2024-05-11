@@ -8,10 +8,10 @@ const producto = axios.create({
     baseURL: "https://api.mercadolibre.com/items/"
 })
 
-export const getProducts = async ()=>{
+export const getProducts = async (searchTerm)=>{
     try {
-        const response = await productos.get('/products');
-        return response.data;
+        const response = await productos.get(`?q=${searchTerm}&limit=10`);
+        return response.data.results;
     } catch (error) {
         throw console.error("Error buscando productos:",error);
     };
