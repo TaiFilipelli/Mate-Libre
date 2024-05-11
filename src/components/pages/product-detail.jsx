@@ -1,10 +1,14 @@
 import React from 'react'
 
-const ProductDetail = (id) => {
+const ProductDetail = ({producto}) => {
   return (
-    <div>
-      <h1 className=''>Esto será la página donde se despliegan los detalles de cada producto</h1>
-    </div>
+    <section className='text-white flex flex-col justify-center items-center'>
+      <h1 className='text-3xl'>Detalles del producto:</h1>
+      <img src={producto.pictures[0].url} alt="Product image" />
+      <h1>{producto.title}</h1>
+      <h2>${producto.price}</h2>
+      <p>Garantia:{producto.warranty}</p>
+    </section>
   )
 }
 

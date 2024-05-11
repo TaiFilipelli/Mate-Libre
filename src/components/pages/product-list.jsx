@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ProductCard from "../product-card";
 import ProductSkeleton from '../skeletons/product-skeleton'
 import { Button } from "keep-react"
@@ -18,17 +18,15 @@ const ProductList = () => {
   };
 
   return (
-    <main className=''>
+    <main>
       <section className='text-white h-screen flex flex-col justify-center items-center'>
-        <h2 className='text-2xl '>Busca el producto que desees en la barra! </h2> 
+        <h2 className='text-3xl mb-4'>Busca el producto que desees en la barra! </h2> 
         <form onSubmit={(e)=>{e.preventDefault(); handleSearch();}} className='items-center flex justify-center'>
-          <input type="search" className='bg-slate-700 w-60 h-10 rounded-md text-center mb-4 mr-4 mt-4' value={searchTerm} onChange={(e)=>{setSearchTerm(e.target.value)}} /> 
+          <input type="search" placeholder="Buscar..." className='bg-slate-700 w-60 h-10 rounded-md text-center mb-4 mr-4 mt-4' value={searchTerm} onChange={(e)=>{setSearchTerm(e.target.value)}} /> 
           <Button color="secondary" size='sm'>Buscar<MagnifyingGlass size={20} className='ml-1.5'/></Button>
         </form>
         {productos.map((producto)=>(
-          <ProductCard key={producto?.id} fallback={<ProductSkeleton />} producto={producto}>
-            
-          </ProductCard>
+            <ProductCard key={producto?.id} fallback={<ProductSkeleton />} producto={producto}/>
         ))}
       </section>
     </main>
