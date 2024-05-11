@@ -1,11 +1,13 @@
 
 const Landing = () => {
   return (
-    <section className='text-white w-full'>
-        <h1 className='text-4x1 font-bold'>Bienvenido a Mate Libre!</h1>
-        <h3 className='text-lg'>El hogar de todo argentino...y con mate incluido!</h3>
-        <a href="/products" className='bg-black'>Poné el agua!</a>
-    </section>
+    <main className='max-w-full '>
+        <section className='text-white h-screen flex flex-col justify-center items-center'>
+            <h1 className='text-5xl font-bold p-8'>Bienvenido a Mate Libre!</h1>
+            <h3 className='text-xl'>El hogar de todo argentino...y con mate incluido!</h3>
+            <a href="/products" className='bg-gradient-to-r from-cyan-300 to-fuchsia-600 rounded-md w-60 p-5 font-bold my-9'>Poné el agua!</a>
+        </section>
+    </main>
   )
 }
 
