@@ -19,7 +19,7 @@ export const getProducts = async (searchTerm)=>{
 
 export const getProduct = async (id)=>{
     try {
-        const response = await producto.get(`/products/${id}`);
+        const response = await producto.get(`/${id}`);
         return response.data;
     } catch (error) {
         throw console.error("Error buscando producto:",error)

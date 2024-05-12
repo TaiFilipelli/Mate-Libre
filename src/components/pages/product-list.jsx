@@ -25,9 +25,11 @@ const ProductList = () => {
           <input type="search" placeholder="Buscar..." className='bg-slate-700 w-60 h-10 rounded-md text-center mb-4 mr-4 mt-4' value={searchTerm} onChange={(e)=>{setSearchTerm(e.target.value)}} /> 
           <Button color="secondary" size='sm'>Buscar<MagnifyingGlass size={20} className='ml-1.5'/></Button>
         </form>
+        <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 flex justify-center">
         {productos.map((producto)=>(
             <ProductCard key={producto?.id} fallback={<ProductSkeleton />} producto={producto}/>
         ))}
+        </div>
       </section>
     </main>
   )
