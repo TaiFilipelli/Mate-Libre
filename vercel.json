@@ -1,6 +1,15 @@
 {
     "rewrites": [
       {"source": "/(.*)", "destination": "/"}
+    ],
+    "builds":[
+      {
+        "source":"/public/logoMate.png",
+        "use":"@vercel/static"
+      }
+    ],
+    "files":[
+      "public/logoMate.png"
     ]
   }
   

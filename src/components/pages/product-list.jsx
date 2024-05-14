@@ -1,6 +1,5 @@
 import { useState } from "react";
 import ProductCard from "../product-card";
-import ProductSkeleton from '../skeletons/product-skeleton'
 import { Button } from "keep-react"
 import { MagnifyingGlass } from "phosphor-react"
 import { getProducts } from "../services/products";
@@ -37,7 +36,7 @@ const ProductList = () => {
       </Fade>
         <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 flex justify-center">
         {productos.map((producto)=>(
-            <ProductCard key={producto?.id} fallback={<ProductSkeleton />} producto={producto}/>
+            <ProductCard key={producto?.id} producto={producto}/>
         ))}
         </div>
       </section>
