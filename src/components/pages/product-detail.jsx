@@ -28,8 +28,17 @@ const ProductDetail = () => {
         <img src={product.pictures[0].url} alt="Product image" className='w-64 mb-4'/>
       )}
       <h1 className='text-xl font-bold mb-3'>{loading ? (<Skeleton baseColor='#575757' highlightColor='#444' width={300}/>) : product?.title}</h1>
-      <h2 className='font-semibold'>{loading? (<Skeleton width={100}/>) : `$${product.price}`}</h2>
-      <p>{loading ? <Skeleton width={300}/> : product.warranty}</p>
+      <h2 className='font-semibold text-lg mb-3'>{loading? (<Skeleton width={100}/>) : `$${product.price}`}</h2>
+      <h3 className='font-semibold text-base mb-7'>{loading ? <Skeleton width={300}/> : product.warranty}</h3>
+      <ul className='font-bold text-lg'>
+          {loading ? Array(6).fill(<Skeleton width={100} />) : (
+            product.attributes.slice(0, 4).map((attribute, index) => (
+              <li key={index}>
+                <strong>{attribute.name}:</strong> {attribute.value_name}
+              </li>
+            ))
+          )}
+        </ul>
       <a href="/products"><Button className='bg-gradient-to-r from-cyan-300 to-fuchsia-600 mt-6'>Volver atrás</Button></a>
     </section>
     </main>
