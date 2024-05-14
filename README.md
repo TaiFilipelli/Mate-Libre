@@ -1,6 +1,4 @@
 # Proyecto: Mate Libre
-## Una aplicación web orientada a emular un mercado online de productos! Presenta un inicio, una lista de productos extraida de la API de Mercado Libre y una página que muestra en detalle los productos que el usuario elija. Implementando tecnologias como axios para el fetch a la api, Keep React para los skeletons y Tailwind para los estilos, el objetivo es emular 
+## Una aplicación web orientada a emular un mercado online de productos! Presenta un inicio, una lista de productos extraida de la API de Mercado Libre y una página que muestra en detalle los productos que el usuario elija. Implementando tecnologias como axios para el fetch a la api, Keep React para los skeletons y Tailwind para los estilos, el objetivo es crear una aplicación sátira de Mercado Libre, usando su API y desplegando sus productos. El usuario tendrá la posibilidad de buscar el producto que desee y ver la información de los 10 primeros resultados. 
 ### Futuras o posibles adquisiciones a la app:
-* Manejo de rutas en el deploy (Actualizacion 10/5: El vercel no me respeta los paths. Desconozco por qué.)
-* Estilos y lógica de pull de datos de la API de ML
-* Responsive, diseño e implementación de Skeletons
+* Responsive
