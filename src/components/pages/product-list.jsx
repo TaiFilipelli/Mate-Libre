@@ -23,7 +23,7 @@ const ProductList = () => {
         setSearched(true);
         localStorage.setItem('searchTerm',searchTerm);
         localStorage.setItem('productos',JSON.stringify(data));
-      },500);
+      },800);
     } catch (error) {
       console.error("Se produjo un error buscando productos:",error);
       setLoading(false);
