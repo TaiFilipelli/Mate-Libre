@@ -34,7 +34,7 @@ const ProductList = () => {
           <input type="search" placeholder="Buscar..." className='bg-slate-700 w-60 h-10 rounded-md text-center mb-4 mr-4 mt-4' value={searchTerm} onChange={(e)=>{setSearchTerm(e.target.value)}} /> 
           <Button size='sm' className='bg-gradient-to-r from-cyan-300 to-fuchsia-600'>Buscar<MagnifyingGlass size={20} className='ml-1.5'/></Button>
         </form>
-        <a href="/" className='mb-12'>Volver al inicio</a>
+        <a href="/" className='mb-12 hover:underline'>Volver al inicio</a>
       </Fade>
         <div className="max-w-screen-lg max-h-32 mx-auto p-4 flex flex-wrap justify-center my-11">
         {loading ? Array(10).fill(<Skeleton height={300} width={150} className='m-5'/>) : productos.map((producto)=>(
