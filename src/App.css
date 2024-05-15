@@ -1,6 +1,12 @@
 body{
     background: linear-gradient(to bottom, #19173c,#432061);
-    background-size: auto;
-    height: 110vh;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
     /* background-image: linear-gradient(45deg, #00e5ff,#ff005b); */
+}
+@media (max-width:345px) {
+    body{
+        width: 120%;
+    }
 }
