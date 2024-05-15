@@ -10,6 +10,7 @@ const ProductList = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [productos, setProductos] = useState([]);
   const [loading, setLoading]=useState(false);
+  const [searched, setSearched]=useState(false);
 
   const handleSearch= async () =>{
     setLoading(true);
@@ -18,6 +19,7 @@ const ProductList = () => {
       setTimeout(()=>{
         setProductos(data);
         setLoading(false);
+        setSearched(true);
       },500);
     } catch (error) {
       console.error("Se produjo un error buscando productos:",error);
@@ -27,7 +29,7 @@ const ProductList = () => {
 
   return (
     <main>
-      <section className='text-white h-screen flex flex-col justify-center items-center'>
+      <section className={`text-white ${ searched ? "h-{150vh}" : "h-screen" } flex flex-col justify-center items-center`}>
       <Fade cascade>
         <h2 className='text-3xl mb-4'>Busca el producto que desees en la barra! </h2> 
         <form onSubmit={(e)=>{e.preventDefault(); handleSearch();}} className='items-center flex justify-center'>
