@@ -31,7 +31,7 @@ const ProductList = () => {
       <Fade cascade>
         <h2 className='text-3xl mb-4'>Busca el producto que desees en la barra! </h2> 
         <form onSubmit={(e)=>{e.preventDefault(); handleSearch();}} className='items-center flex justify-center'>
-          <input type="search" placeholder="Buscar..." className='bg-slate-700 w-60 h-10 rounded-md text-center mb-4 mr-4 mt-4' value={searchTerm} onChange={(e)=>{setSearchTerm(e.target.value)}} /> 
+          <input type="search" placeholder="Buscar..." className='bg-slate-700 w-60 h-10 rounded-md text-center mb-4 mr-4 mt-4 xs:w-52 xs:ml-4' value={searchTerm} onChange={(e)=>{setSearchTerm(e.target.value)}} /> 
           <Button size='sm' className='bg-gradient-to-r from-cyan-300 to-fuchsia-600'>Buscar<MagnifyingGlass size={20} className='ml-1.5'/></Button>
         </form>
         <a href="/" className='mb-12 hover:underline'>Volver al inicio</a>
